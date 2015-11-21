@@ -10,6 +10,9 @@ public class UsersMap {
     public  synchronized  static UsersMap getInstance (){
         if (instanse == null) {
             instanse = new UsersMap();
+            User admin = new User("admin", "admin");
+            admin.setFirstName("Admin");
+            instanse.addUser(admin);
         }
         return  instanse;
     }

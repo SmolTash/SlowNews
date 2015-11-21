@@ -1,0 +1,4 @@
+sn-001: News, Archive. Ошибка отображения рисунков
+sn-002: Login. Добавить дефолтного пользователя admin/admin
+sn-003: Registration. Добавить проверку на совпадение Password Conferm password
+sn-004: Подключение зависимостей

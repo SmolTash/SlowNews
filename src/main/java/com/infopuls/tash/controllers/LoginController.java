@@ -16,8 +16,6 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //String userPath = null; // request.getServletPath();
-
         String userPath = "/login";
         request.setAttribute("errorText", "");
         String url = "/WEB-INF" + userPath + ".jsp";
@@ -31,7 +29,7 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userPath = request.getServletPath();
+        String userPath = null;
         UsersMap map = UsersMap.getInstance();
 
         String login = request.getParameter("login");

@@ -31,16 +31,6 @@
       </c:if>
       </div>
 
-
-
-      <%--<ul>--%>
-        <%--<li class = "top-menu">--%>
-          <%--<a class = "top-menu-a" href="login" class="active">Log in</a>--%>
-        <%--</li>--%>
-        <%--<li class = "top-menu">--%>
-          <%--<a class = "top-menu-a" href="sigin">Sign in</a>--%>
-        <%--</li>--%>
-      <%--</ul>--%>
     </div>
   </div>
 </div>

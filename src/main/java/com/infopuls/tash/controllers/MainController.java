@@ -7,9 +7,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 
-@WebServlet (name="MainController", urlPatterns={"/login", "/registration", "/news" , "/archive" , "/logout"})
+@WebServlet (name="MainController", urlPatterns={"/login00", "/registration", "/news" , "/archive" , "/logout"})
 
 public class MainController extends HttpServlet {
     @Override
@@ -30,22 +31,6 @@ public class MainController extends HttpServlet {
         }else if (userPath.equals("/logout")){
             userPath = "/index";
             request.getSession().setAttribute("user" ,null );
-        }else if (userPath.equals("/login")) {
-            String login = request.getParameter("login");
-            String password = request.getParameter("password");
-            if (login != null || password != null ) {
-                if (map.checkPassword(login,password)) {
-                    User current_user = map.findUserbyLogin(login);
-                    request.getSession().setAttribute("user" ,current_user );
-                    userPath = "/news";
-                }else{
-                    userPath = "/login";
-                    request.setAttribute("errorText" ,"Incorrect login or password" );
-                }
-            }else {
-                userPath = "/login";
-            }
-
         }else if (userPath.equals("/registration")) {
                 String login = request.getParameter("contact_login");
                 String password = request.getParameter("contact_password");

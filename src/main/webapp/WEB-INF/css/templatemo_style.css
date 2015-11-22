@@ -236,6 +236,10 @@ iframe { border: none; }
 .top-menu-right {
 	text-align: right;
 }
+.top-menu-left {
+	text-align: left;
+	padding: 5px 15px;
+}
 .top-menu {
 	display: inline-block; /* Строчно-блочные элементы */
 	margin-right: 3px; /* Расстояние между пунктами меню */

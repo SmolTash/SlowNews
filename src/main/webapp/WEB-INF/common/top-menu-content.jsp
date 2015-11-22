@@ -4,7 +4,14 @@
 
 <div class="templatemo-logo "> <!--visible-xs-block-->
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-left-container">
-    <h1 class="logo-left">Slow</h1>
+    <%--<span id="id_date" style="color:black;"></span>--%>
+    <%--<span id="id_time" style="color:black;"></span>--%>
+      <h1 class="logo-left">Slow</h1>
+      <div class="top-menu-left">
+        <lable id="countNewNews"></lable> news appeared since last page update
+      </div>
+
+
   </div>
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-right-container">
     <h1 class="logo-right">News</h1>
@@ -22,7 +29,6 @@
 
       <c:if test="${user.login != null}">
         <div class = "top-menu-a">${user.firstName.concat(" ").concat(user.lastName)} </div>
-
         <ul>
           <li class = "top-menu">
             <a class = "top-menu-a" href="logout" class="active">Log out</a>
@@ -30,7 +36,6 @@
         </ul>
       </c:if>
       </div>
-
     </div>
   </div>
 </div>

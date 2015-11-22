@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <%@ include file="common/head-content.jsp"%>
+    <%@ include file="common/head-contain.jsp"%>
 </head>
 <body>
 <%@ include file="common/top-menu-content.jsp"%>
@@ -51,11 +51,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <footer>
-                <p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">
-                    Copyright &copy; 2015 TashKa
-                </p>
-            </footer>
+            <%@ include file="common/footer.jsp"%>
         </div>
     </div> <!-- right section -->
 </div>

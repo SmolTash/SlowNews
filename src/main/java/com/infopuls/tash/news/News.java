@@ -1,19 +1,29 @@
 package com.infopuls.tash.news;
 
+import org.eclipse.persistence.jaxb.xmlmodel.XmlAccessType;
+import org.eclipse.persistence.oxm.annotations.XmlPath;
+
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Наталья on 14.11.2015.
- */
+
+@XmlRootElement(name="rss")
 public class News {
 
     private String source;
     private Date createdDate;
+
+    @XmlPath("channel/item/description")
     private String content;
+
+    @XmlPath("channel/item/title")
     private String title;
+
+
     private String imagePath;
     private String category;
     private String author;
@@ -141,5 +151,13 @@ public class News {
         newsList.add(news3);
 
         return newsList;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

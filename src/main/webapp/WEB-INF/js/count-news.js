@@ -1,3 +1,5 @@
+window.onload = function() { countNewNews(); };
+
 function countNewNews() {
     var startNum = document.getElementById("countNewNews").innerHTML;
    if (startNum ===''){

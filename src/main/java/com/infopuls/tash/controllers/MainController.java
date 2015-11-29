@@ -2,6 +2,7 @@ package com.infopuls.tash.controllers;
 
 import com.infopuls.tash.user.User;
 import com.infopuls.tash.user.UsersMap;
+import com.infopuls.tash.ws.Weather;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +19,9 @@ public class MainController extends HttpServlet {
 
         String userPath = request.getServletPath();
         UsersMap map = UsersMap.getInstance();
+        request.getSession().setAttribute("weather" , new Weather().getCurrentWeather() );
+        //request.getSession().setAttribute("weather" , new Weather(22.3) );
+
 
 
         if (userPath.equals("/") ) {

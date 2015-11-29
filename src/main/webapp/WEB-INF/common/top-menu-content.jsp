@@ -1,12 +1,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="user" scope="session" class="com.infopuls.tash.user.User" />
-<%--<jsp:useBean id="users" scope="application" class="net.tash.infopuls.UsersMap" />--%>
+<jsp:useBean id="weather" scope="application" class="com.infopuls.tash.ws.Weather" />
+
 
 <div class="templatemo-logo "> <!--visible-xs-block-->
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-left-container">
     <%--<span id="id_date" style="color:black;"></span>--%>
     <%--<span id="id_time" style="color:black;"></span>--%>
       <h1 class="logo-left">Slow</h1>
+      <div class="top-menu-left">
+        ${weather.temperatureC} °C
+      </div>
       <div class="top-menu-left">
         <lable id="countNewNews"></lable> news appeared since last page update
       </div>

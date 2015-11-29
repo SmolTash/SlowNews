@@ -5,7 +5,7 @@
   <head>
     <%@ include file="common/head-contain.jsp"%>
   </head>
-  <body onload = "countNewNews();">
+  <body>  <%--onload = "countNewNews();"--%>
     <%@ include file="common/top-menu-content.jsp"%>
 
     <div class="templatemo-container">
